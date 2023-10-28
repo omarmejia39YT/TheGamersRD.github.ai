@@ -1,0 +1,165 @@
+/*portada*/
+
+.article-container-cover {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  margin-top: 80px;
+  background-image: url(./imagenez/portada.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.article-container-cover:before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background: rgba(212, 12, 12, 0.575);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container-cover-info {
+  max-width: 800px;
+  height: 500px;
+  margin: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.container-cover-info h1 {
+  font-size: 60px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.container-cover-info p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/*container - contenido del articulo*/
+
+.container-content {
+  width: 1200px;
+  margin: auto;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+article {
+  width: 100%;
+  padding: 20px;
+  padding-bottom: 40px;
+  box-shadow: -10px 0 20px -30px black;
+  border-radius: 6px;
+}
+article ::before {
+  content: none;
+  width: 100%;
+  height: 6px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: red;
+  position: relative;
+  overflow: hidden;
+}
+
+article h1 {
+  margin-top: 20px;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+article p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: black;
+}
+
+article img {
+  width: 80%;
+  margin-top: 20px;
+}
+
+/*aside de los articulos relacionados*/
+.container-aside aside {
+  width: 320px;
+  box-shadow: 0 0 60px -60px black;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-left: 40px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+
+.container-aside aside img {
+  width: 100%;
+}
+
+.container-aside aside h2,
+.container-aside aside p {
+  margin-top: 20px;
+  padding: 0px;
+}
+
+.container-aside aside button {
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 10px 50px;
+  font-size: 16px;
+  background: rgb(255, 1, 1);
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.container-aside aside button :hover {
+  opacity: 0, 9;
+}
+
+@media screen and (max-width: 1220px) {
+  .article-container-content {
+    max-width: 1000px;
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .container-content {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  #article {
+    box-shadow: 0 0 0 0;
+  }
+
+  .container-aside {
+    display: flex;
+    justify-content: center;
+  }
+
+  .container-aside aside {
+    max-width: 300px;
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container-aside {
+    flex-wrap: wrap;
+  }
+}
